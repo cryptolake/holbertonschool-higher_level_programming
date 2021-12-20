@@ -4,7 +4,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *p = list, *pp = list;
 
-	if (!p->next)
+	if (p->next == NULL)
 		return (1);
 
 	while (p)
