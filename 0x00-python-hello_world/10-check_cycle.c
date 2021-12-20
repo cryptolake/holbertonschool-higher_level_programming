@@ -2,20 +2,22 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *p = list;
-	listint_t *arr[100];
-	size_t i = 0, j;
+	listint_t *p = list, *pp = list;
 
 	while (p)
 	{
-		
-		arr[i] = p;
-		for (j = 0; j <= i; j++) 
-			if (p->next == arr[j])
-				return (1);
 
+		while (pp != p)
+		{
+			if (p->next == pp)
+			{
+				return (1);
+			}
+			pp = pp->next;
+		}
+
+		pp = list;
 		p = p->next;
-		i++;
 	}
 
 	return (0);
