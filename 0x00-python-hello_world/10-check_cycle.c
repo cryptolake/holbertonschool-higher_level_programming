@@ -4,13 +4,10 @@ int check_cycle(listint_t *list)
 {
 	listint_t *p = list, *pp = list;
 
-	if (p->next == NULL)
-		return (1);
-
 	while (p)
 	{
 
-		while (pp != p)
+		while (pp && pp != p)
 		{
 			if (p->next == pp)
 				return (1);
