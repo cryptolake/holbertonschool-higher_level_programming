@@ -6,8 +6,10 @@ int check_cycle(listint_t *list)
 
 	while (p)
 	{
+		if (p->next == p)
+			return (1);
 
-		while (pp && pp != p)
+		while (pp != p)
 		{
 			if (p->next == pp)
 				return (1);
