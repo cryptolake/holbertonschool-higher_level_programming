@@ -8,7 +8,6 @@ int check_cycle(listint_t *list)
 	{
 		if (p->next == p)
 			return (1);
-
 		while (pp != p)
 		{
 			if (p->next == pp)
@@ -16,10 +15,8 @@ int check_cycle(listint_t *list)
 
 			pp = pp->next;
 		}
-
 		p = p->next;
 		pp = list;
 	}
-
 	return (0);
 }
