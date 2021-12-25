@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
-import calculator_1
+from calculator_1 import add, sub, mul, div
 import sys
 
-if __name__ == "__main__":
+
+def main():
     argv = sys.argv
     argv.pop(0)
     argc = len(argv)
@@ -20,12 +21,16 @@ if __name__ == "__main__":
     sign = argv[1]
 
     if sign == "+":
-        res = calculator_1.add(a, b)
+        res = add(a, b)
     elif sign == "-":
-        res = calculator_1.sub(a, b)
+        res = sub(a, b)
     elif sign == "*":
-        res = calculator_1.mul(a, b)
+        res = mul(a, b)
     elif sign == "/":
-        res = calculator_1.div(a, b)
+        res = div(a, b)
 
     print("{:d} {} {:d} = {:d}".format(a, sign, b, res))
+
+
+if __name__ == "__main__":
+    main()
