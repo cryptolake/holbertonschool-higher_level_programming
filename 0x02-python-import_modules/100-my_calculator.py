@@ -3,8 +3,7 @@
 import calculator_1
 import sys
 
-
-def main():
+if __name__ == "__main__":
     argv = sys.argv
     argv.pop(0)
     argc = len(argv)
@@ -30,7 +29,3 @@ def main():
         res = calculator_1.div(a, b)
 
     print("{:d} {} {:d} = {:d}".format(a, sign, b, res))
-
-
-if __name__ == "__main__":
-    main()
