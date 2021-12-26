@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-from calculator_1 import add, sub, mul, div
-import sys
-
 
 def main():
     argv = sys.argv
@@ -33,4 +30,6 @@ def main():
 
 
 if __name__ == "__main__":
+    from calculator_1 import add, sub, mul, div
+    import sys
     main()
