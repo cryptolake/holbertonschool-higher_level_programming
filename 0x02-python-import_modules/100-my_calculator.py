@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-
 def main():
     argv = sys.argv
     argv.pop(0)
@@ -25,9 +24,7 @@ def main():
         res = mul(a, b)
     elif sign == "/":
         res = div(a, b)
-
     print("{:d} {} {:d} = {:d}".format(a, sign, b, res))
-
 
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div

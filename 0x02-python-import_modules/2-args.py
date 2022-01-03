@@ -2,7 +2,6 @@
 """Count the number of arguments and display them."""
 import sys
 
-
 def main():
     """Count the number of arguments and display them."""
     argv = sys.argv
