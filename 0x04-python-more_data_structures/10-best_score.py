@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary is None:
+    if a_dictionary is None or a_dictionary == {}:
         return None
-    max_dict = {'max_val': 0, 'key': ""}
+    max_dict = {'max_val': float('-inf'), 'key': ""}
 
     for key in a_dictionary:
         if a_dictionary[key] > max_dict['max_val']:
