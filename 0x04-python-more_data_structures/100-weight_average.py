@@ -2,6 +2,8 @@
 def weight_average(my_list=[]):
     average = 0
     total_weight = 0
+    if not my_list:
+        return 0
     for couple in my_list:
         score, weight = couple
         average += score * weight
