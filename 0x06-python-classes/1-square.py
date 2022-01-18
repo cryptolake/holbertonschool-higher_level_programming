@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a square with a private attribute"""
+"""a square with a private attribute."""
 
 
 class Square():
