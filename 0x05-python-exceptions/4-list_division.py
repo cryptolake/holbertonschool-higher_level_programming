@@ -11,7 +11,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except IndexError:
             sum_list.append(0)
             print("out of range")
-            return sum_list
+            continue
         try:
             res = n1 / n2
         except ZeroDivisionError:
