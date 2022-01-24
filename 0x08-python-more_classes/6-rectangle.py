@@ -25,6 +25,7 @@ class Rectangle:
         return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(arg):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
