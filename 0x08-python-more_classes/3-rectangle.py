@@ -17,7 +17,7 @@ class Rectangle:
             for j in range(0, self.width):
                 rect += "#"
             rect += "\n"
-        return rect
+        return rect[0:len(rect) - 1]
 
     @property
     def width(self):
