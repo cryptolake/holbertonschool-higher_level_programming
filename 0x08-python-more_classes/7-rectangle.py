@@ -18,7 +18,7 @@ class Rectangle:
             return rect
         for i in range(0, self.height):
             for j in range(0, self.width):
-                rect += str(Rectangle.print_symbol)
+                rect += str(self.print_symbol)
             rect += "\n"
         return rect[0:len(rect) - 1]
 
