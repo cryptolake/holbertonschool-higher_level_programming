@@ -37,4 +37,8 @@ class Rectangle:
         return self.height * self.width
 
     def perimeter(self):
-        return (self.height + self.width) * 2
+        if self.width == 0 or self.height == 0:
+            pr = 0
+        else:
+            pr = (self.height + self.width) * 2
+        return pr
