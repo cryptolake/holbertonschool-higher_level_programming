@@ -23,11 +23,11 @@ def matrix_divided(matrix, div):
 
         if not isinstance(x, list):
             raise TypeError(("matrix must be a matrix (list of lists)"
-                            "of integers/floats"))
+                            " of integers/floats"))
 
         if not all(check_type(y) for y in x):
             raise TypeError(("matrix must be a matrix (list of lists)"
-                            "of integers/floats"))
+                            " of integers/floats"))
 
         new_list = [round(elem / div, 2) for elem in x]
         new_matrix.append(new_list)
