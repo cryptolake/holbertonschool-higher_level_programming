@@ -13,7 +13,6 @@ def print_square(size):
 
     rect = ""
     if size == 0:
-        print("")
         return
     for i in range(0, size):
         for j in range(0, size):
