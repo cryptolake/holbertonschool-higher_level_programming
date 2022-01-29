@@ -9,11 +9,18 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     tokens = (".", "?", ":")
-    for r in tokens:
-        text = text.replace(r + ' ', r)
+    phrase = ""
+    phrases = []
 
-    for c in text:
-        if c in tokens:
-            print(c, end="\n\n")
+    for p in text:
+        phrase += p
+        if p in tokens:
+            phrases.append(phrase)
+            phrase = ""
+    phrases.append(phrase)
+
+    for p, phrase in enumerate(phrases):
+        if (p == len(phrases)-1):
+            print(phrase.strip(), end="")
         else:
-            print(c, end="")
+            print(phrase.strip(), end="\n\n")
