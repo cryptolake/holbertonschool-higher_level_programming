@@ -46,3 +46,10 @@
 	... except Exception as e:
 	... 	print(e)
 	cannot convert float NaN to integer
+
+::
+	>>> try:
+	... 	add_integer(float('inf'))
+	... except Exception as e:
+	... 	print(e)
+	cannot convert float infinity to integer
