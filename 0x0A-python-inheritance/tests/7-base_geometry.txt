@@ -1,0 +1,18 @@
+::
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("width", 89)
+
+::
+	>>> try:
+	... 	bg.integer_validator("length", "name")
+	... except Exception as e:
+	... 	print(e)
+	length must be an integer
+
+::
+	>>> try:
+	... 	bg.integer_validator("length", -4)
+	... except Exception as e:
+	... 	print(e)
+	length must be greater than 0
