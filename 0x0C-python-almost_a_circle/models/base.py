@@ -3,6 +3,7 @@
 import json
 from os import open, read, write
 
+
 class Base:
     """Base Class of all classes."""
     __nb_objects = 0

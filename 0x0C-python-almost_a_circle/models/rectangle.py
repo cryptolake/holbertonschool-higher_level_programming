@@ -22,7 +22,7 @@ class Rectangle(Base):
             position of rectangle in the y axis
         id : int
             id of rectangle
-        
+
         Methods
         -------
         area()
