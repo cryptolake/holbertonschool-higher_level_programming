@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 from models.base import Base
-import json
 """A rectangle class."""
 
 
@@ -47,14 +46,9 @@ class Rectangle(Base):
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def display(self):
-        for y in range(0, self.y):
-            print()
-        for h in range(0, self.height):
-            for x in range(0, self.x):
-                print(' ', end="")
-            for w in range(0, self.width):
-                print('#', end="")
-            print()
+        print('\n' * self.y, end='')
+        for height in range(self.height):
+            print(' ' * self.x + '#' * self.width)
 
     @staticmethod
     def type_check(name, obj):
