@@ -1,46 +1,17 @@
 #!/usr/bin/python3
 """A rectangle class."""
-
-
 from models.base import Base
 
 
 class Rectangle(Base):
-    """
-        A rectangle class.
-        ...
-
-        Attributes:
-        -----------
-
-        width : int
-            width of rectangle
-        height : int
-            height of the rectangle
-        x : int
-            position of rectangle in the x axis
-        y : int
-            position of rectangle in the y axis
-        id : int
-            id of rectangle
-
-        Methods
-        -------
-        area()
-            return area of rectangle
-        display()
-            display the rectangle
-        update()
-            update values of class instance
-
-    """
+    """A rectangle class."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     def __str__(self):
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
