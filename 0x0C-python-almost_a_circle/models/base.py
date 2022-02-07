@@ -7,8 +7,9 @@ from os import open, read, write
 class Base:
     """Base Class of all classes."""
     __nb_objects = 0
+
     def __init__(self, id=None):
-        if (id != None):
+        if id is not None:
             self.id = id
         else:
             __class__.__nb_objects += 1
