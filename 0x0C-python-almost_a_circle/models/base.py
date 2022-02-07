@@ -6,9 +6,11 @@ from os import open, read, write
 
 class Base:
     """Base Class of all classes."""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """Initialize the instance."""
         if id is not None:
             self.id = id
         else:
@@ -17,6 +19,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Turn Dictionary to json."""
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
