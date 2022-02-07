@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """Base Class of all classes."""
 import json
 from os import open, read, write
@@ -18,11 +18,3 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         return json.dumps(list_dictionaries)
-    
-    @classmethod
-    def save_to_file(cls, list_objs):
-        objs = []
-        if list_objs is not None:
-            for obj in list_objs:
-                objs.append(obj.to_dictionary())
-            
