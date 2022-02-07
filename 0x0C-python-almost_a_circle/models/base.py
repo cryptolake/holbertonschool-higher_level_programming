@@ -2,6 +2,7 @@
 """Base Class of all classes."""
 import json
 
+
 class Base:
     """Base Class of all classes."""
 
