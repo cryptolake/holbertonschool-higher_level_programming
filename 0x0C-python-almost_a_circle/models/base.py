@@ -26,6 +26,8 @@ class Base:
     @staticmethod
     def from_json_string(my_str):
         """Json to obj."""
+        if my_str is None or my_str == "":
+            return []
         return json.loads(my_str)
 
     @classmethod
