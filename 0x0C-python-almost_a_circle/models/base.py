@@ -40,4 +40,4 @@ class Base:
             else:
                 for obj in list_objs:
                     objs.append(obj.to_dictionary())
-                json.dump(objs, f)
+                f.write(__class__.to_json_string(objs))
