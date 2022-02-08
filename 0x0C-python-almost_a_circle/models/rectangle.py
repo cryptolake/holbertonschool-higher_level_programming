@@ -41,7 +41,7 @@ class Rectangle(Base):
         """Width setter."""
         self.type_check("width", w)
         if (w <= 0):
-            raise ValueError("width must > 0")
+            raise ValueError("width must be > 0")
         self.__width = w
 
     @property
@@ -54,7 +54,7 @@ class Rectangle(Base):
         """Height setter."""
         self.type_check("height", h)
         if (h <= 0):
-            raise ValueError("height must > 0")
+            raise ValueError("height must be > 0")
         self.__height = h
 
     @property
