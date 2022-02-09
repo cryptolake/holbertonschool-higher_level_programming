@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base Class of all classes."""
 import json
+import os
 
 
 class Base:
@@ -51,3 +52,15 @@ class Base:
             ins = cls(1, 0, 0)
         ins.update(**dictionary)
         return ins
+
+    @classmethod
+    def load_from_file(cls):
+        """desialise json file to objects"""
+        instances = []
+        filename = cls.__name__ + ".json"
+        if os.path.isfile(filename):
+            with open(filename, 'r') as f:
+                objs = cls.from_json_string(f.read())
+                for obj in objs:
+                    instances.append(cls.create(**obj))
+        return instances
