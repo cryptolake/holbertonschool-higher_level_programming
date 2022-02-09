@@ -40,4 +40,14 @@ class Base:
             else:
                 for obj in list_objs:
                     objs.append(obj.to_dictionary())
-                f.write(__class__.to_json_string(objs))
+                f.write(cls.to_json_string(objs))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Create instance from dictionary."""
+        if cls.__name__ == "Rectangle":
+            ins = cls(1, 1, 0, 0)
+        elif cls.__name__ == "Square":
+            ins = cls(1, 0, 0)
+        ins.update(**dictionary)
+        return ins

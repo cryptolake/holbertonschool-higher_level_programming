@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """A simple square."""
-from inspect import Attribute
 from models.rectangle import Rectangle
 
 
