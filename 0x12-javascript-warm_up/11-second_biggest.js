@@ -4,8 +4,8 @@ const { argv } = require('process');
 if (argv.length < 4) {
   console.log(0);
 } else {
-  const argints = argv.slice(2, argv.length);
+  let argints = argv.slice(2, argv.length);
+  argints = argints.map(n => parseInt(n));
   argints.sort();
-  const secondlast = argints.length - 2;
-  console.log(argints[secondlast]);
+  console.log(argints[argints.length - 2]);
 }
