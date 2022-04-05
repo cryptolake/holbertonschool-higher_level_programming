@@ -14,5 +14,4 @@ module.exports = class Square extends Rectangle {
       console.log(line);
     }
   }
-
 };
