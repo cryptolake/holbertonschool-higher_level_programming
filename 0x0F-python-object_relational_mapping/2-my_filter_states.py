@@ -9,10 +9,8 @@ def main(user, passw, db, state):
     db = sql.connect(host='localhost', user=user,
                      passwd=passw, db=db, port=3306)
     c = db.cursor()
-    c.execute("""
-            SELECT id, name
-            FROM states
-            WHERE name='{}' ORDER BY id;""".format(state))
+    c.execute("SELECT id, name FROM states \
+            WHERE name = '{:s}' ORDER BY id;".format(state))
     res = c.fetchall()
     for r in res:
         print(r)
