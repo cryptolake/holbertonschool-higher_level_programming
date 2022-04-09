@@ -14,7 +14,10 @@ def main(user, passw, db):
     Session = sessionmaker(bind=engine)
     session = Session()
     first_state = session.query(State).first()
-    print("{:d}: {:s}".format(first_state.id, first_state.name))
+    if first_state:
+        print("{:d}: {:s}".format(first_state.id, first_state.name))
+    else:
+        print("Noting")
 
 
 if __name__ == '__main__':
