@@ -17,7 +17,7 @@ def main(user, passw, db):
     if first_state:
         print("{:d}: {:s}".format(first_state.id, first_state.name))
     else:
-        print("Noting")
+        print("Nothing")
 
 
 if __name__ == '__main__':
