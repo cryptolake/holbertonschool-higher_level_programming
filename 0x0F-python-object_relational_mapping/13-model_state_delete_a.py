@@ -13,7 +13,7 @@ def main(user, passw, db):
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).all()
+    states = session.query(State).filter(State.name.like('%a%')).all()
     for state in states:
         if 'a' in state.name:
             session.delete(state)
