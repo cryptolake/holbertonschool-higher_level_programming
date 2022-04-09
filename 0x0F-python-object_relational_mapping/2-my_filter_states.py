@@ -13,7 +13,8 @@ def main(user, passw, db, state):
             WHERE name = '{:s}' ORDER BY id;".format(state))
     res = c.fetchall()
     for r in res:
-        print(r)
+        if state == r[1]:
+            print(r)
 
 
 if __name__ == '__main__':
