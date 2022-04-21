@@ -3,7 +3,7 @@
 def findPeakUtil(arr, low, high, n):
 
     # Find index of middle element
-    mid = (high + low)//2
+    mid = low + (high - low)//2
 
     # Compare middle element with its
     # neighbours (if neighbours exist)
