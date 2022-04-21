@@ -28,8 +28,8 @@ def findPeakUtil(arr, low, high, n):
 
 # A wrapper over recursive
 # function findPeakUtil()
-def find_peak(arr):
-    n = len(arr)
+def find_peak(list_of_integers):
+    n = len(list_of_integers)
     if n == 0:
         return None
-    return arr[findPeakUtil(arr, 0, n - 1, n)]
+    return list_of_integers[findPeakUtil(list_of_integers, 0, n - 1, n)]
