@@ -1,3 +1,3 @@
 #!/bin/bash
 # Get body of request
-[[ $(curl -s -I "$1" | head -1 | cut -d' ' -f2) == "200" ]] && curl -s -X "GET" "$1"
+curl -Ls -I -X 'GET' "$1" | grep -q "200 OK" && curl -s -L -X "GET" "$1"
