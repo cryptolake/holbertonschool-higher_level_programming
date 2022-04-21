@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Find a peak in array."""
+
 
 def findPeakUtil(arr, low, high, n):
-
+    """Find peak using divide and conquer."""
     # Find index of middle element
     mid = low + (high - low)//2
 
@@ -29,6 +31,7 @@ def findPeakUtil(arr, low, high, n):
 # A wrapper over recursive
 # function findPeakUtil()
 def find_peak(list_of_integers):
+    """Wrap the recursive function."""
     n = len(list_of_integers)
     if n == 0:
         return None
