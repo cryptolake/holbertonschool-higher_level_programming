@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 """Get http header."""
 from sys import argv
-from urllib import request
+import urllib.request
 
-with request.urlopen(argv[1]) as response:
-    print(response.getheader('X-Request-Id'))
+
+def main(argv):
+    """Run main function."""
+    with urllib.request.urlopen(argv[1]) as response:
+        print(response.getheader('X-Request-Id'))
+
+
+if __name__ == "__main__":
+    main(argv)
