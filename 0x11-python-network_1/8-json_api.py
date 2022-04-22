@@ -18,6 +18,6 @@ if __name__ == "__main__":
     if len(resp) == 0:
         print("No result")
     else:
-        id = resp[0]['id']
-        name = resp[0]['name']
+        id = resp['id']
+        name = resp['name']
         print("[{}] {}".format(id, name))
