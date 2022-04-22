@@ -4,7 +4,7 @@ from sys import argv
 import requests
 
 if __name__ == "__main__":
-    if argv[1]:
+    if len(argv) > 1:
         q = argv[1]
     else:
         q = ""
@@ -15,7 +15,7 @@ if __name__ == "__main__":
         print("Not a valid JSON")
         exit()
 
-    if len(resp) == 0:
+    if resp == {}:
         print("No result")
     else:
         id = resp['id']
