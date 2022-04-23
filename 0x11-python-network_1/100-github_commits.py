@@ -8,5 +8,5 @@ if __name__ == "__main__":
                      .format(argv[2], argv[1]))
     commits = r.json()
     for commit in commits:
-        print("{}: {}".format(commit['commit']['tree']['sha'],
+        print("{}: {}".format(commit['sha'],
                               commit['commit']['author']['name']))
