@@ -1,10 +1,6 @@
 #!/usr/bin/node
 const axios = require('axios');
-axios.get(process.argv[2], {
-  headers: {
-    Accept: 'application/json'
-  }
-})
+axios.get(process.argv[2])
   .then(resp => {
     let charCount = 0;
     const films = resp.data.results;
