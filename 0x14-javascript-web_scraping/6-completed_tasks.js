@@ -4,7 +4,7 @@ const axios = require('axios');
 axios.get(process.argv[2])
   .then(resp => {
     const todos = resp.data;
-    let completed = {};
+    const completed = {};
     for (let i = 0; i < todos.length; i++) {
       if (todos[i].completed) {
         if (completed[todos[i].userId] !== undefined) {
@@ -14,5 +14,5 @@ axios.get(process.argv[2])
         }
       }
     }
-    console.log(completed)
+    console.log(completed);
   });
